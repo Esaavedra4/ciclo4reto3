@@ -6,6 +6,7 @@ package com.ciclo4.reto3.cruprepository;
 
 
 import com.ciclo4.reto3.model.Product;
+import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 /**
@@ -13,5 +14,9 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @author blink
  */
 public interface ProductCrudRepository extends MongoRepository<Product, String> {
+    
+    public List<Product> findByPrice(double price);
+    public List<Product> findByDescriptionContainingIgnoreCase(String description);
+    
     
 }

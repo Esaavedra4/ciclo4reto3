@@ -47,5 +47,9 @@ public class UserRepository {
     public void delete(User user) {
         crudInterface.delete(user);
     }
+    
+      public List<User> getByMonthBirthDay(String month){
+        return crudInterface.findByMonthBirthtDay(month);
+    }
 
 }

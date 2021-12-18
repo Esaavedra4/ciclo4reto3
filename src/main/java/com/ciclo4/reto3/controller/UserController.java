@@ -76,4 +76,10 @@ public class UserController {
         return servicio.delete(id);
     }
     
+    
+    @GetMapping("/birthday/{month}")
+    public List<User> getByMonthBirthDay(@PathVariable("month") String month){
+        return servicio.getByMonthBirthDay(month);
+    }
+    
 }

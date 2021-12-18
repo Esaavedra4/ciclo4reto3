@@ -114,4 +114,8 @@ return aBoolean;
 
     }
     
+        public List<User> getByMonthBirthDay(String month){
+        return repositorio.getByMonthBirthDay(month);
+    }
+    
 }

@@ -38,4 +38,12 @@ public class ProductRepository {
     public void delete(String id) {
         CrudRepository.deleteById(id);
     }
+    
+    public List<Product> getByPrice(double price){
+       return CrudRepository.findByPrice(price);
+    }
+
+    public List<Product> getByDescriptionContains(String description){
+       return CrudRepository.findByDescriptionContainingIgnoreCase(description);
+    }
 }
